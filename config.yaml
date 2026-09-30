@@ -1,0 +1,25 @@
+# input files and folder locations
+samples: "sample_list.txt"
+genome: "genome/LDECv4_genome_unmasked_mito.fasta"
+gtf: "genome/CPBv5_single_mod.gtf"
+raw_data: "raw_data"
+
+# output folder location
+outdir: "results"
+
+fastp:
+  extra: "--detect_adapter_for_pe --trim_front1 10 --trim_front2 10"
+
+star_index:
+  extra: "--sjdbOverhang 139 --genomeSAindexNbases 13"
+
+featurecounts:
+  extra: "-p --countReadPairs" 
+
+threads:
+  fastqc: 2
+  fastp: 4
+  star_index: 8
+  star_align: 8
+  index_bam: 2
+  featurecounts: 8
