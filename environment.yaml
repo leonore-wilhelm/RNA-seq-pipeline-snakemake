@@ -1,0 +1,11 @@
+name: cpb-rnaseq
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - snakemake-minimal=8.*
+  - star=2.7.*
+  - fastp=0.23.*
+  - fastqc=0.12.*
+  - subread=2.0.*      # provides featureCounts
+  - multiqc=1.21.*
